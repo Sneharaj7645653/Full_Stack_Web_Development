@@ -1,3 +1,5 @@
+# HTML Tutorial Notes
+
 HTML TUTORIAL 
  
 What is HTML? 
@@ -24,17 +26,17 @@ markup tags
 HTML uses 
 markup tags
  to describe web pages 
-HTML Tags 
+## HTML Tags 
 HTML markup tags are us
 ually called HTML tags 
  
 HTML tags are keywords surrounded by 
 angle brackets 
-like <html> 
+like `<html>` 
  
 HTML tags normally 
 come in pairs
- like <b> and </b> 
+ like `<b>` and `</b>` 
  
 The first tag in a pair is the 
 start tag,
@@ -66,20 +68,19 @@ documents and display them as web pages.
 The browser does not display the HTML tags, 
 but uses the tags to interp
 ret the content of the page: 
-<html> 
-<body> 
+`<html>` 
+`<body>` 
 
  
 
+```html
 <h1>My First Heading</h1> 
-<p>My first paragraph.</p> 
- 
+<p>My first paragraph.`</p>`
+```
 
-</body> 
+`</body>` 
 
-</html > 
-
- 
+`</html >` 
 
  
 
@@ -87,19 +88,20 @@ ret the content of the page:
 
  
 
+ 
 
 Example Explained 
  
-The text between <html> and </
-html> describes the web page 
+The text between `<html>` and `</
+html>` describes the web page 
  
-The text between <body> and </body>
+The text between `<body>` and `</body>`
  is the visible page content 
  
-The text between <h1> and </h1>
+The text between `<h1>` and `</h1>`
  is displayed as a heading 
  
-The text between <p> and </p> 
+The text between `<p>` and `</p>` 
 is displayed as a paragraph 
 Editing HTML 
 HTML can be written and edited using ma
@@ -113,13 +115,17 @@ is the best way to learn HTML.
 When you save an HTML file, you can use eith
 er the .htm or the .html file extension. 
 There is no difference; it is entirely up to you. 
-HTML Headings 
-HTML headings are defined with the <h1> to <h6> tags. 
+## HTML Headings 
+HTML headings are defined with the `<h1>` to `<h6>` tags. 
 Example 
+```html
 <h1>This is a heading</h1> 
-<h2>This is a heading</h2> 
+<h2>This is a heading</h2>
+```
 
-<h3>This is a heading</h3>  
+```html
+<h3>This is a heading</h3>
+```
 
  
 
@@ -127,23 +133,28 @@ Example
 
  
  
-HTML Paragraphs 
-HTML paragraphs are defined with the <p> tag. 
+## HTML Paragraphs 
+HTML paragraphs are defined with the `<p>` tag. 
 Example 
-<p>This is a paragraph.</p> 
+```html
+<p>This is a paragraph.`</p>`
+```
 
-<p>This is another paragraph.</p>  
+```html
+<p>This is another paragraph.`</p>`
+```
 
  
 
  
 
-
-HTML Links 
-HTML links are defined with the <a> tag. 
+## HTML Links 
+HTML links are defined with the `<a>` tag. 
 Example 
+```html
 <a href="http://www.xitecsoluti
-ons.com">This is a link</a>  
+ons.com">This is a link</a>
+```
 Note:
  The link address is specified
  in the href attribute. 
@@ -151,25 +162,24 @@ Note:
 later chapter of 
 this tutorial). 
  
-HTML Images 
-HTML i mages are de fined with the <img> tag. 
+## HTML Images 
+HTML i mages are de fined with the `<img>` tag. 
 Example 
-<img src="xitec.jpg" widt
-h="104" height="142" />  
+`<img src="xitec.jpg" widt
+h="104" height="142" />`  
  
 
 Note:
  The name and the size of the image are provided as attributes. 
 
-
-HTML Elements 
+## HTML Elements 
 An HTML element is everything from
  the start tag to the end tag: 
 Start tag * Element content End tag * 
-<p> This is a paragraph </p> 
-<a href="default.htm" > This is a link </a> 
+`<p>` This is a paragraph `</p>` 
+`<a href="default.htm" >` This is a link `</a>` 
 
-<br />     
+`<br />`     
 *
  The start tag is often called the 
 opening tag
@@ -177,7 +187,7 @@ opening tag
 closing tag
 . 
  
-HTML Element Syntax 
+## HTML Element Syntax 
  
 An HTML element starts with a 
 start tag / opening tag
@@ -212,62 +222,70 @@ Most HTML elements can be nested (can contain other HTML elements).
 HTML documents consist of nested HTML elements. 
 
  
-HTML Document Example 
-<html> 
+## HTML Document Example 
+`<html>` 
  
 
-<body> 
-<p>This is my first paragraph.</p> 
-</body> 
+`<body>` 
+```html
+<p>This is my first paragraph.`</p>` 
+`</body>`
+```
 
  
 
-</html >  
-
+`</html >`  
 
 The example above contains 3 HTML elements. 
  
-HTML Example Explained 
-The <p> element:
+## HTML Example Explained 
+The `<p>` element:
  
-<p>This is my first paragraph.</p> 
-The <p> element defines a paragraph in the HTML document. 
-The element has a start tag <p> and an end tag </p>. 
+```html
+<p>This is my first paragraph.`</p>`
+```
+The `<p>` element defines a paragraph in the HTML document. 
+The element has a start tag `<p>` and an end tag `</p>`. 
 The element content is: This is my first paragraph. 
-The <body> element:
+The `<body>` element:
  
-<body> 
-<p>This is my first paragraph.</p> 
+`<body>` 
+```html
+<p>This is my first paragraph.`</p>`
+```
 
-</body>  
-The <body> element defines the 
+`</body>`  
+The `<body>` element defines the 
 body of the HTML document. 
-The element has a start tag <body> and an end tag </body>. 
+The element has a start tag `<body>` and an end tag `</body>`. 
 The element content is another HTML element (a p element). 
-The <html> element:
+The `<html>` element:
  
-<html> 
- 
-
-<body> 
-
-<p>This is my first paragraph.</p> 
-
-</body> 
-
+`<html>` 
  
 
-</html >  
-The <html> element defines the whole HTML document. 
-The element has a start tag <html> and an end tag </html>. 
+`<body>` 
+
+```html
+<p>This is my first paragraph.`</p>`
+```
+
+`</body>` 
+
+ 
+
+`</html >`  
+The `<html>` element defines the whole HTML document. 
+The element has a start tag `<html>` and an end tag `</html>`. 
 The element content is another HTML element (the body element). 
  
 Don't Forget the End Tag 
 Some HTML elements might display corre
 ctly even if you forget the end tag: 
+```html
 <p>This is a paragraph 
-<p>This is a paragraph  
-
+<p>This is a paragraph
+```
 
 The example above works in most browsers
 , because the closing tag is considered 
@@ -279,21 +297,21 @@ if you forget the end tag .
 Empty HTML Elements 
 HTML elements with no content are called empty elements. 
 
-<br> is an empty element without a closi
-ng tag (the <br> tag 
+`<br>` is an empty element without a closi
+ng tag (the `<br>` tag 
 defines a line break). 
 Tip:
  In XHTML, all elements must be closed. 
 Adding a slash inside 
-the start tag, like <br 
-/>, is the proper way of closing 
+the start tag, like `<br 
+/>`, is the proper way of closing 
 empty elements in XHTML (a nd XML). 
  
 HTML Tip: Use Lowercase Tags 
-HTML tags are not case sensitive: <P> m
-eans the same as <p>. Many web sites use 
+HTML tags are not case sensitive: `<P>` m
+eans the same as `<p>`. Many web sites use 
 uppercase HTML tags. 
-HTML Attributes 
+## HTML Attributes 
  
 HTML elements can have 
 attributes
@@ -312,20 +330,20 @@ name="value"
  
  
 Attribute Example 
-HTML links are defined with the <a> tag. Th
+HTML links are defined with the `<a>` tag. Th
 e link address is specified in the href 
 attribute: 
 Example 
+```html
 <a href="http://www. xitecsoluti
-ons.com">This is a link</a>  
- 
+ons.com">This is a link</a>
+```
 
  
 
  
 
  
-
 
 Always Quote Attribute Values 
 Attribute values should always
@@ -343,7 +361,7 @@ Attribute names and attribute
 values are case-insensitive. 
 Newer versions of (X)HTML will demand lowercase attributes. 
  
-HTML Attribute
+## HTML Attribute
 s Reference 
 A complete list of legal attributes fo
 r each HTML element is listed in our: 
@@ -368,16 +386,19 @@ tooltip_text
 Specifies extra information about an element 
 (displayed as a tool tip) 
 For more information about standard attributes:  
-HTML Headings 
-Headings are defined with the <h1> to <h6> tags. 
-<h1> defines the most important heading. 
-<h6> defines the least important heading. 
+## HTML Headings 
+Headings are defined with the `<h1>` to `<h6>` tags. 
+`<h1>` defines the most important heading. 
+`<h6>` defines the least important heading. 
 Example 
+```html
 <h1>This is a heading</h1> 
-<h2>This is a heading</h2> 
+<h2>This is a heading</h2>
+```
 
-<h3>This is a heading</h3>  
-
+```html
+<h3>This is a heading</h3>
+```
 
  
  
@@ -402,20 +423,26 @@ the document structure.
 H1 headings should be used as ma in headings, followed by H2 headings, then the less 
 important H3 headings, and so on. 
  
-HTML Lines 
-The <hr /> tag creates a horizon
+## HTML Lines 
+The `<hr />` tag creates a horizon
 tal line in an HTML page. 
  
 The hr element can be used to separate content: 
 Example 
+```html
 <p>This is a paragraph</p> 
-<hr /> 
+`<hr />`
+```
 
-<p>This is a paragraph</p> 
+```html
+<p>This is a paragraph</p>
+```
 
-<hr /> 
+`<hr />` 
 
-<p>This is a paragraph</p>  
+```html
+<p>This is a paragraph</p>
+```
 
  
 
@@ -423,16 +450,15 @@ Example
 
  
  
-HTML Comments 
+## HTML Comments 
 Comments can be inserted into the HTML
  code to make it more readable and 
 understandable. Comments are ignored by 
 the browser and are not displayed. 
 
-
 Comments are written like this: 
 Example 
-<!-- This is a comment -->  
+`<!-- This is a comment -->`  
  
 
  
@@ -450,25 +476,27 @@ ct "View Source" (IE) or "View Page Source"
 (Firefox), or similar for other browsers. Th
 is will open a window containing the HTML 
 code of the page. 
-HTML Tag Reference 
+## HTML Tag Reference 
 You will learn more about HTML tags and attribut
 es in the next chapters of this tutorial. 
 Tag Description 
-<html>
+`<html>`
  Defines an HTML document
-<body>
+`<body>`
  Definesthedocument'sbody
-<h1> to <h6>
+`<h1>` to `<h6>`
  Defines HTML headings 
-<hr />
+`<hr />`
  Defines a horizontal line 
-<!-->
+`<!-->`
  Defines a comment 
-HTML Paragraphs 
-Paragraphs are defined with the <p> tag. 
+## HTML Paragraphs 
+Paragraphs are defined with the `<p>` tag. 
 Example 
+```html
 <p>This is a paragraph</p> 
-<p>This is another paragraph</p>  
+<p>This is another paragraph</p>
+```
 
  
 
@@ -477,13 +505,14 @@ Note:
  Browsers automa tically add an empt
 y line before and after a paragraph. 
 
-
 Don't Forget the End Tag 
 Most browsers will display HTML corre
 ctly even if you forget the end tag: 
 Example 
+```html
 <p>This is a paragraph 
-<p>This is another paragraph  
+<p>This is another paragraph
+```
 
  
 
@@ -494,22 +523,23 @@ tag can produce unexpected results or errors.
 Note:
  Future version of HTML will not allow you to skip end tags. 
  
-HTML Line Breaks 
-Use the <br /> tag if you want 
+## HTML Line Breaks 
+Use the `<br />` tag if you want 
 a line break (a new line) with
 out starting a new paragraph: 
 Example 
+```html
 <p>This is<br />a para<br />gr
-aph with line breaks</p>  
- 
+aph with line breaks</p>
+```
 
-The <br /> element is an empty 
+The `<br />` element is an empty 
 HTML element. It has no end tag. 
-<br> or <br /> 
+`<br>` or `<br />` 
 In XHTML, XML, elements with no e
 nd tag (closing tag) are not allowed.  
-Even if <br> works in all 
-browsers, writing <br /> instea
+Even if `<br>` works in all 
+browsers, writing `<br />` instea
 d works better in XHTML and 
 XML applications. 
  
@@ -521,21 +551,19 @@ With HTML, you cannot change the output by ad
 ding extra spaces or extra lines in your 
 HTML code. 
 
-
 The browser will remove extra spaces and extra lines when the page is displayed. Any 
 number of lines count as one line, and 
 any number of spaces count as one space. 
  
-HTML Tag Reference 
+## HTML Tag Reference 
 Tag Description 
-<p>
+`<p>`
  Defines a paragraph 
-<br />
+`<br />`
  Inserts a single line break 
  
 
-
-HTML Text Formatting 
+## HTML Text Formatting 
 This text is bold
  
  
@@ -546,8 +574,8 @@ This text is italic
  
  
  
-HTML Formatting Tags 
-HTML uses tags like <b> and <i> for formatting output, like 
+## HTML Formatting Tags 
+HTML uses tags like `<b>` and `<i>` for formatting output, like 
 bold
  or 
 italic
@@ -556,18 +584,18 @@ These HTML tags are called formatting tags
 (look at the bottom of this page for a 
 complete reference).  
  
-Often <strong> renders as <b>, and <em> renders as <i>.
+Often `<strong>` renders as `<b>`, and `<em>` renders as `<i>`.
  
  
 However, there is a difference in the meaning of these tags: 
 
  
 
-<b> or <i> defines bold 
+`<b>` or `<i>` defines bold 
 or italic text only. 
  
 
-<strong> or <em> means that you want the 
+`<strong>` or `<em>` means that you want the 
 text to be rendered in a way that the 
 user understands as "important". Today, a
 ll major browsers render strong as bold 
@@ -576,89 +604,87 @@ one day wants to make a text highlighted
 with the strong feature, it might be
  cursive for example and not bold! 
  
-HTML Text Formatting Tags 
+## HTML Text Formatting Tags 
 Tag Description 
-<b>
+`<b>`
  Defines bold text 
-<big>
+`<big>`
  Defines big text 
-<em>
+`<em>`
  Defines emphasized text  
-<i>
+`<i>`
  Defines italic text 
-<small>
+`<small>`
  Defines small text 
-<strong>
+`<strong>`
  Defines strong text 
-<sub>
+`<sub>`
  Defines subscripted text 
-<sup>
+`<sup>`
  Defines superscripted text 
-<ins>
+`<ins>`
  Definesinsertedtext 
-<del>
+`<del>`
  Defines deleted text 
-
 
 HTML "Computer Output" Tags 
 Tag Description 
-<code>
+`<code>`
  Defines computer code text 
-<kbd>
+`<kbd>`
  Defines keyboard text  
-<samp>
+`<samp>`
  Defines sample computer code 
-<tt>
+`<tt>`
  Defines teletype text 
-<var>
+`<var>`
  Defines a variable 
-<pre>
+`<pre>`
  Defines preformatted text 
 HTML Citations, Quotations, and Definition Tags 
 Tag Description 
-<abbr>
+`<abbr>`
  Defines an abbreviation 
-<acronym>
+`<acronym>`
  Defines an acronym 
-<address>
+`<address>`
  Defines contact information for the author/owner of a document 
-<bdo>
+`<bdo>`
  Defines the text direction 
-<blockquote>
+`<blockquote>`
  Defines a long quotation 
-<q>
+`<q>`
  Defines a short quotation 
-<cite>
+`<cite>`
  Defines a citation 
-<dfn>
+`<dfn>`
  Defines a definition term 
  
-HTML Fonts 
-The example below shows how the HTML could look by using the <font> tag: 
+## HTML Fonts 
+The example below shows how the HTML could look by using the `<font>` tag: 
 Example 
-<p> 
-<font size="5" face="a
-rial" color="red"> 
+`<p>` 
+`<font size="5" face="a
+rial" color="red">` 
 This paragraph is in Arial, size 5, and in red text color. 
 
-</font> 
+`</font>` 
 
-</p> 
+`</p>` 
 
  
 
-<p> 
+`<p>` 
 
-<font size="3" face="verdana" color="blue"> 
+`<font size="3" face="verdana" color="blue">` 
 
 This paragraph is in Verdana, si
 ze 3, and in blue text color. 
-</font> 
+`</font>` 
 
-</p> 
+`</p>` 
 
  
-
 
 HTML Styles - CSS 
 CSS is used to style HTML elements. 
@@ -702,25 +728,28 @@ try it yourself.
 
  
 
-
 HTML Style Example - Background Color 
 The background-color property defines 
 the background color for an element: 
 Example 
-<html> 
+`<html>` 
  
 
-<body style="background-color:yellow;"> 
+`<body style="background-color:yellow;">` 
 
-<h2 style="background-color:red;">This is a heading</h2> 
+```html
+<h2 style="background-color:red;">This is a heading</h2>
+```
 
+```html
 <p style="background-color:green
-;">This is a paragraph.</p> 
-</body> 
+;">This is a paragraph.`</p>` 
+`</body>`
+```
 
  
 
-</html > 
+`</html >` 
 
  
 
@@ -733,54 +762,57 @@ The font-family, color, and font
 , color, and size of the text 
 in an element: 
 Example 
-<html> 
+`<html>` 
  
 
-<body> 
+`<body>` 
 
+```html
 <h1 style="font-family:ver
 dana;">A heading</h1> 
 <p style="font-family:arial;color:r
-ed;font-size:20px;">A paragraph.</p> 
-</body> 
+ed;font-size:20px;">A paragraph.`</p>` 
+`</body>`
+```
 
  
 
-</html > 
+`</html >` 
 
  
 
 The font-family, color, and font-size prope
-rties make the old <font> tag obsolete. 
+rties make the old `<font>` tag obsolete. 
  
  
  
  
-
 
 HTML Style Example - Text Alignment 
 The text-align property specifi
 es the horizontal alignment of text in an element: 
 Example 
-<html> 
+`<html>` 
  
 
-<body> 
+`<body>` 
 
+```html
 <h1 style="text-align: center;"
 >Center-aligned heading</h1> 
-<p>This is a paragraph.</p> 
+<p>This is a paragraph.`</p>`
+```
 
-</body> 
+`</body>` 
 
  
 
-</html > 
+`</html >` 
 
  
 
 The text-align property makes th
-e old <center> tag obsolete. 
+e old `<center>` tag obsolete. 
  
 Deprecated Tags and Attributes 
 In HTML 4, several tags and attributes were deprecated. Deprecated means that they will 
@@ -790,12 +822,12 @@ The message is clear:
 These tags and attribut
 es should be avoided: 
 Tags Description 
-<center> Deprecated. Defines centered cont ent 
-<font> and <basefont> Deprecat
+`<center>` Deprecated. Defines centered cont ent 
+`<font>` and `<basefont>` Deprecat
 ed. Defines HTML fonts 
-<s> and <strike> Deprecated. 
+`<s>` and `<strike>` Deprecated. 
 Defines strikethrough text 
-<u> Deprecated. Defines underlined text 
+`<u>` Deprecated. Defines underlined text 
 Attributes Description 
 align Deprecated. Defines the alignment of text
 bgcolor Deprecated. Defines the background color
@@ -805,8 +837,7 @@ For all of the above: Use styles instead!
  
  
 
-
-HTML Links 
+## HTML Links 
 Links are found in nearly all Web pages. Links
  allow users to click their way from page 
 to page. 
@@ -817,9 +848,9 @@ a new document or a new section within the current document.
 When you move the cursor over a link in a We
 b page, the arrow will turn into a little 
 hand. 
-Links are specified in HTML using the <a> tag. 
+Links are specified in HTML using the `<a>` tag. 
 
-The <a> tag can be used in two ways: 
+The `<a>` tag can be used in two ways: 
 1.
  
 To create a link to another document, by using the href attribute 
@@ -827,19 +858,21 @@ To create a link to another document, by using the href attribute
  
 To create a bookmark inside a docum
 ent, by using the name attribute 
-HTML Link Syntax 
+## HTML Link Syntax 
 The HTML code for a link is simple. It looks like this: 
-<a href="
+`<a href="
 url
-">
+">`
 Link text
-</a>  
+`</a>`  
 The href attribute specifies the destination of a link. 
 Example 
+```html
 <a href="http://www.xitecsolutions.com/">Visit
  Xitec Solutions</a> 
  which will display 
-like this: 
+like this:
+```
 Visit Xitec Solutions
   
 Clicking on this hyperlink 
@@ -857,11 +890,11 @@ The exampl e below will open the linked doc
 ume nt in a new browser window or a new 
 tab: 
 
-
 Example 
+```html
 <a href="http://www. xitecsolutions.com/" 
-target="_blank">Visit Xitec Solutions!</a>  
- 
+target="_blank">Visit Xitec Solutions!`</a>`
+```
 
  
 HTML Links - The 
@@ -881,32 +914,35 @@ way. They are invisible to the reader.
 Example 
 A na me d anchor inside an HTML docume nt: 
 
-<a name ="tips">Useful Tips Section</a>  
+```html
+<a name ="tips">Useful Tips Section</a>
+```
 Create a link to the "Useful Tips Section" inside the same document: 
-<a href="#tips">Visit the Useful Tips Section</a>  
+```html
+<a href="#tips">Visit the Useful Tips Section</a>
+```
 Or, create a link to the "Useful Ti
 ps Section" from another page: 
-<a href="http://www. xitecsolutions.com/html_links.htm#tips"> 
+`<a href="http://www. xitecsolutions.com/html_links.htm#tips">` 
 Visit the Useful Tips Section</a>  
 
  
 
  
-HTML Link Tags 
+## HTML Link Tags 
 Tag Description 
-<a>
+`<a>`
  Defines an anchor 
  
 
-
-HTML Images 
+## HTML Images 
 Example 
  
  
-HTML Images - The <img> Tag and the Src Attribute  
-In HTML, images are defined with the <img> tag.   
+HTML Images - The `<img>` Tag and the Src Attribute  
+In HTML, images are defined with the `<img>` tag.   
 
-The <img> tag is empty, which means that it 
+The `<img>` tag is empty, which means that it 
 contains attributes 
 only, and has no closing 
 tag.  
@@ -916,11 +952,11 @@ The value of the src attribute is the
 URL of the image you want to display.  
 Syntax for defining an image:
  
-<img src="
+`<img src="
 url
 " alt="
 some_text
-"/>  
+"/>`  
  
 HTML Images - The Alt Attribute 
 The required alt attribute specifies an alternat
@@ -928,13 +964,12 @@ e text for an image, if the image cannot be
 displayed. 
 The value of the alt attribute 
 is an author-defined text:  
-<img src="boat.gif" alt="Big Boat" />  
+`<img src="boat.gif" alt="Big Boat" />`  
 The alt attribute provides alternative informa
 tion for an image if a user for some reason 
 cannot view it (because of slow connection, an erro
 r in the src attribute, or if the user uses 
 a screen reader). 
-
 
  
 HTML Images - Set Height 
@@ -943,8 +978,8 @@ The height and width attributes are used to
 specify the height and width of an image. 
 The attribute values are specified in pixels by default: 
 
-<img src="pulpit.jpg" alt="Pulpit 
-rock" width="304" height="228" />  
+`<img src="pulpit.jpg" alt="Pulpit 
+rock" width="304" height="228" />`  
 Tip:
  It is a good practice to specify both the heig
 ht and width attributes for an image. If 
@@ -957,107 +992,127 @@ image. The effect will be that the page
 layout will change during loading (while the 
 images load). 
  
-HTML Image Tags 
+## HTML Image Tags 
 Tag Description 
-<img />
+`<img />`
  Defines an image 
-<map>
+`<map>`
  Defines an image- map 
-<area />
+`<area />`
  Defines a clickable area inside an image-map
  
 
-
-HTML Tables 
+## HTML Tables 
 Apples 44% 
 Bananas 23% 
 Oranges 13% 
 
 Other 10% 
  
-Tables are defined with the <table> tag. 
-A table is divided into rows (with the <tr> 
+Tables are defined with the `<table>` tag. 
+A table is divided into rows (with the `<tr>` 
 tag), and each row is divided into data cells 
-(with the <td> tag). td stands for "table data,"
+(with the `<td>` tag). td stands for "table data,"
  and holds the content of
- a data cell. A <td> 
+ a data cell. A `<td>` 
 tag can contain text, links, images, 
 lists, forms, other tables, etc. 
 Table Example 
-<table border="1"> 
-<tr> 
+`<table border="1">` 
+`<tr>` 
 
-<td>row 1, cell 1</td> 
+```html
+<td>row 1, cell 1</td>
+```
 
-<td>row 1, cell 2</td> 
+```html
+<td>row 1, cell 2</td>
+```
 
-</tr> 
+`</tr>` 
 
-<tr> 
+`<tr>` 
 
-<td>row 2, cell 1</td> 
+```html
+<td>row 2, cell 1</td>
+```
 
-<td>row 2, cell 2</td> 
+```html
+<td>row 2, cell 2</td>
+```
 
-</tr> 
+`</tr>` 
 
-</table>  
+`</table>`  
 How the HTML code above looks in a browser: 
 row 1, cell 1 row 1, cell 2 
 row 2, cell 1 row 2, cell 2 
  
  
-HTML Tables and the Border Attribute 
+## HTML Tables and the Border Attribute 
 If you do not specify a border attribute, th
 e table will be displayed without borders. 
 Sometimes this can be useful, but most of 
 the time, we want the borders to show.  
 To display a table with borders, specify the border attribute: 
 
-<table border="1"> 
-<tr> 
+`<table border="1">` 
+`<tr>` 
 
-
+```html
 <td>Row 1, cell 1</td> 
-<td>Row 1, cell 2</td> 
+<td>Row 1, cell 2</td>
+```
 
-</tr> 
+`</tr>` 
 
-</table>  
+`</table>`  
 
  
 
  
-HTML Table Headers 
-Header information in a table are defined with the <th> tag. 
+## HTML Table Headers 
+Header information in a table are defined with the `<th>` tag. 
 All major browsers will display the text in
- the <th> element as bold and centered. 
-<table border="1"> 
-<tr> 
+ the `<th>` element as bold and centered. 
+`<table border="1">` 
+`<tr>` 
 
-<th>Header 1</th> 
+```html
+<th>Header 1</th>
+```
 
-<th>Header 2</th> 
+```html
+<th>Header 2</th>
+```
 
-</tr> 
+`</tr>` 
 
-<tr> 
+`<tr>` 
 
-<td>row 1, cell 1</td> 
+```html
+<td>row 1, cell 1</td>
+```
 
-<td>row 1, cell 2</td> 
+```html
+<td>row 1, cell 2</td>
+```
 
-</tr> 
+`</tr>` 
 
-<tr> 
+`<tr>` 
 
-<td>row 2, cell 1</td> 
+```html
+<td>row 2, cell 1</td>
+```
 
-<td>row 2, cell 2</td> 
+```html
+<td>row 2, cell 2</td>
+```
 
-</tr> 
+`</tr>` 
 
-</table>  
+`</table>`  
 How the HTML code above looks in your browser: 
 Header 1 Header 2 
 row 1, cell 1 row 1, cell 2 
@@ -1073,7 +1128,6 @@ Table with a caption
  
 How to add a caption to a table. 
 
-
 Table cells that span more than one row/ column 
 How to define table cells that span more than one row or one column. 
 Tags inside a table
@@ -1088,37 +1142,36 @@ How to use cellspacing to increase the distance between the cells.
 The frame attribute 
 How to use the "frame" attribute to 
 control the borders around the table. 
-HTML Table Tags 
+## HTML Table Tags 
 Tag Description 
-<table>
+`<table>`
  Defines a table 
-<th>
+`<th>`
  Defines a table header 
-<tr>
+`<tr>`
  Defines a table row 
-<td>
+`<td>`
  Defines a table cell 
-<caption>
+`<caption>`
  Defines a table caption 
-<colgroup>
+`<colgroup>`
  Defines a group of columns in a table, for formatting 
-<col />
+`<col />`
  Defines attribute values for one or more columns in a table 
-<thead>
+`<thead>`
  Groups the header content in a table 
-<tbody>
+`<tbody>`
  Groups the body content in a table 
-<tfoot>
+`<tfoot>`
  Groups the footer content in a table  
  
  
 
  
  
-HTML Lists 
+## HTML Lists 
 The most common HTML lists ar
 e ordered and unordered lists: 
-
 
 An ordered list: 
 1.
@@ -1142,62 +1195,73 @@ How to create an unordered list in an HTML document.
 Ordered list 
 How to create an ordered list in an HTML document. 
  
-HTML Unordered Lists 
+## HTML Unordered Lists 
 An unordered list starts with 
-the <ul> tag. Each list item
- starts with the <li> tag. 
+the `<ul>` tag. Each list item
+ starts with the `<li>` tag. 
 The list items are marked with bulle
 ts (typically small black circles). 
-<ul> 
-<li>Coffee</li> 
+`<ul>` 
+```html
+<li>Coffee</li>
+```
 
-<li>Milk</li> 
+```html
+<li>Milk</li>
+```
 
-</ul>  
+`</ul>`  
 How the HTML code above looks in a browser: 
  
 Coffee 
  
 Milk 
-HTML Ordered Lists 
-An ordered list starts with the <ol> tag. 
-Each list item starts with the <li> tag. 
+## HTML Ordered Lists 
+An ordered list starts with the `<ol>` tag. 
+Each list item starts with the `<li>` tag. 
 The list items are marked with numbers. 
 
-<ol> 
-<li>Coffee</li> 
+`<ol>` 
+```html
+<li>Coffee</li>
+```
 
-<li>Milk</li> 
+```html
+<li>Milk</li>
+```
 
-</ol>  
+`</ol>`  
 How the HTML code above looks in a browser: 
 1.
  
 Coffee 
 
-
 2.
  
 Milk 
  
-HTML Definition Lists 
+## HTML Definition Lists 
 A definition list is a list of items, 
 with a description of each item. 
-The <dl> tag defines a definition list. 
+The `<dl>` tag defines a definition list. 
 
-The <dl> tag is used in conjunction with <d
-t> (defines the item in the list) and <dd> 
+The `<dl>` tag is used in conjunction with `<d
+t>` (defines the item in the list) and `<dd>` 
 (describes the item in the list): 
-<dl> 
-<dt>Coffee</dt> 
+`<dl>` 
+```html
+<dt>Coffee</dt>
+```
 
-<dd>- black hot drink</dd> 
+`<dd>`- black hot drink</dd> 
 
-<dt>Milk</dt> 
+```html
+<dt>Milk</dt>
+```
 
-<dd>- white cold drink</dd> 
+`<dd>`- white cold drink</dd> 
 
-</dl>  
+`</dl>`  
 How the HTML code above looks in a browser: 
 Coffee 
 - black hot drink 
@@ -1218,24 +1282,23 @@ Definition list
 Demonstrates a definition list. 
  
 
-
-HTML List Tags 
+## HTML List Tags 
 Tag Description 
-<ol>
+`<ol>`
  Defines an ordered list 
-<ul>
+`<ul>`
  Defines an unordered list 
-<li>
+`<li>`
  Defines a list item 
-<dl>
+`<dl>`
  Defines a definition list 
-<dt>
+`<dt>`
  Defines an item in a definition list 
-<dd>
+`<dd>`
  Defines a description of 
 an item in a definition list
  
-HTML Forms and Input 
+## HTML Forms and Input 
 HTML Forms are used to select 
 different kinds of user input. 
 HTML for ms are used to pass data to a server. 
@@ -1245,13 +1308,13 @@ xt fields, checkboxes, radio-buttons, submit
 buttons and more. A form can also contain sele
 ct lists, textarea, fieldset, legend, and label 
 elements. 
-The <form>  tag is used to create an HTML for m: 
-<form> 
+The `<form>`  tag is used to create an HTML for m: 
+`<form>` 
  
 input elements
  
 . 
-</form> 
+`</form>` 
 
  
 HTML Forms - The Input Element 
@@ -1266,16 +1329,15 @@ more.
 The most used input types are described below. 
 Text Fields 
 
-
-<input type="text" /> defines 
+`<input type="text" />` defines 
 a one-line input field that a 
 user can enter text into: 
-<form> 
-First name: <input type="text" 
-name="firstname" /><br /> 
-Last name: <input type="text" name="lastname" /> 
+`<form>` 
+First name: `<input type="text" 
+name="firstname" />``<br />` 
+Last name: `<input type="text" name="lastname" />` 
 
-</form>  
+`</form>`  
 How the HTML code above looks in a browser: 
 First name: 
  
@@ -1287,12 +1349,12 @@ e. Also note that the default
 width of a text field is 20 
 characters.   
 Password Field 
-<input type="password" /> 
+`<input type="password" />` 
 defines a password field: 
-<form> 
-Password: <input type="pa
-ssword" name="pwd" /> 
-</form>  
+`<form>` 
+Password: `<input type="pa
+ssword" name="pwd" />` 
+`</form>`  
 How the HTML code above looks in a browser: 
 Password: 
  
@@ -1301,49 +1363,48 @@ Note:
 sked (shown as asteri
 sks or circles).   
 Radio Buttons 
-<input type="radio" />
+`<input type="radio" />`
  defines a radio button. Ra dio butt
 ons let a user select ONLY ONE 
 of a limited number of choices: 
-<form> 
-<input type="radio" name ="sex" 
-value="male" /> Male<br /> 
-<input type="radio" name ="sex"
- value="female" /> Female 
-</form>  
+`<form>` 
+`<input type="radio" name ="sex" 
+value="male" />` Male<br /> 
+`<input type="radio" name ="sex"
+ value="female" />` Female 
+`</form>`  
 How the HTML code above looks in a browser: 
 Male 
 Fe ma le  
  
 
-
 Checkboxes  
-<input type="checkbox" /> defines a chec
+`<input type="checkbox" />` defines a chec
 kbox. Checkboxes let a user select ONE or 
 MORE options of a limited number of choices. 
-<form> 
-<input type="checkbox" name="vehicle" va
-lue="Bike" /> I have a bike<br /> 
-<input type="checkbox" name ="vehicle"
- value="Car" /> I have a car  
-</form>  
+`<form>` 
+`<input type="checkbox" name="vehicle" va
+lue="Bike" />` I have a bike<br /> 
+`<input type="checkbox" name ="vehicle"
+ value="Car" />` I have a car  
+`</form>`  
 How the HTML code above looks in a browser: 
 I have a bike 
 I have a car  
  
 Submit Button  
-<input type="submit" /> defines a submit button. 
+`<input type="submit" />` defines a submit button. 
 A submit button is used to send form data to
  a server. The data is sent to the page 
 specified in the form's action attribute. The 
 file defined in the action attribute usually 
 does something with the received input: 
-<form name="input" action="html_form_action.asp" method="get"> 
-Username: <input type="
-text" name ="user" /> 
-<input type="submit" value="Submit" /> 
+`<form name="input" action="html_form_action.asp" method="get">` 
+Username: `<input type="
+text" name ="user" />` 
+`<input type="submit" value="Submit" />` 
 
-</form>  
+`</form>`  
 How the HTML code above looks in a browser: 
 Username: 
 S
@@ -1354,34 +1415,33 @@ eld above, and click the "Submit" button, the
 browser will send your input to a page calle
 d "html_form_action.asp". The page will 
 show you the received input.  
-HTML Form Tags 
+## HTML Form Tags 
 Tag Description 
-<form>
+`<form>`
  Defines an HTML form for user input 
-<input />
+`<input />`
  Defines an input control 
-<textarea>
+`<textarea>`
  Defines a multi-line text input control 
 
-
-<label>
+`<label>`
  Defines a label for an input element 
-<fieldset>
+`<fieldset>`
  Defines a border around elements in a form 
-<legend>
+`<legend>`
  Defines a caption for a fieldset element 
-<select>
+`<select>`
  Defines a select 
 list (drop-down list) 
-<optgroup>
+`<optgroup>`
  Defines a group of related 
 options in a select list
-<option>
+`<option>`
  Defines an option in a select list 
-<button>
+`<button>`
  Defines a push button 
  
-HTML Frames 
+## HTML Frames 
 With frames, you can display more than one HTML document in the same browser 
 window. Each HTML document is called a fram
 e, and each frame is independent of the 
@@ -1403,7 +1463,7 @@ and HOW MUCH percentage/pixels of
  space will occupy each of them. 
  
 The HTML frame Element 
-The <frame> tag defines one particular
+The `<frame>` tag defines one particular
  window (fra me) within a frameset. 
 In the example below we have a frameset with two columns. 
 The first column is set to 25% of the width 
@@ -1413,13 +1473,12 @@ ndow. The document "frame_a.htm" is put into
 the first column, and the document "frame
 _b.ht m" is put into the second column: 
 
+`<frameset cols="25%,75%">` 
+   `<frame src="frame_a.htm" />` 
 
-<frameset cols="25%,75%"> 
-   <frame src="frame_a.htm" /> 
+   `<frame src="frame_b.htm" />` 
 
-   <frame src="frame_b.htm" /> 
-
-</frameset>  
+`</frameset>`  
 Note:
  The frameset column size can also be se
 t in pixels (cols="200,500"), and one of the 
@@ -1429,39 +1488,38 @@ Tip:
  If a frame has visible borders, the user
  can resize it by dragging the border. To 
 prevent a user from doing this, you can a
-dd noresize="noresize" to the <frame> tag. 
+dd noresize="noresize" to the `<frame>` tag. 
 Note:
- Add the <noframes> tag for brow
+ Add the `<noframes>` tag for brow
 sers that do not support frames. 
 Important:
- You cannot use the <body></body>
+ You cannot use the `<body>``</body>`
  tags together with the 
-<frameset></frameset> tags! However, if you 
-add a <noframes> tag containing some text 
+`<frameset>``</frameset>` tags! However, if you 
+add a `<noframes>` tag containing some text 
 for browsers that do not support frames, 
 you will have to enclose the text in 
-<body></body> tags! See how it is d
+`<body>``</body>` tags! See how it is d
 one in the first example below. 
  
-HTML Frame Tags 
+## HTML Frame Tags 
 Tag Description 
-<frameset>
+`<frameset>`
  Defines a set of frames 
-<frame />
+`<frame />`
  Defines a sub window (a frame) 
-<noframes>
+`<noframes>`
  Defines a nofra me  section for browsers that do not handle frames 
  
 
-
-HTML Iframes 
+## HTML Iframes 
 An iframe is used to display 
 a web page within a web page. 
 Syntax for adding an iframe:
  
-<iframe src="
+`<iframe src="
 URL
-"></iframe>  
+">``</iframe>`  
 The URL points to the loca
 tion of the separate page. 
 Iframe - Set Height and Width 
@@ -1472,8 +1530,8 @@ The attribute values are specified
  can also be in percent (like 
 "80%"). 
 Example 
-<iframe src="demo_iframe.htm" wi
-dth="200" height="200"></iframe> 
+`<iframe src="demo_iframe.htm" wi
+dth="200" height="200">``</iframe>` 
  
 
  
@@ -1483,7 +1541,7 @@ ifies whether or not to disp
 lay a border around the iframe. 
 Set the attribute value to "0" to remove the border: 
 Example 
-<iframe src="demo_iframe.htm"  frameborder="0"></iframe> 
+`<iframe src="demo_iframe.htm"  frameborder="0">``</iframe>` 
  
 
  
@@ -1491,19 +1549,18 @@ Use iframe as a Target for a Link
 An iframe can be used as the target frame for a link. 
 The target attribute of a link must refer to the name attribute of the iframe: 
 Example 
-<iframe src="demo_iframe.htm"
- name="iframe_a"></iframe> 
-<p><a href="http://www. xitecsol
-utions.com" target="iframe_a"> 
-xitecsolutions.com</a></p>  
-
+`<iframe src="demo_iframe.htm"
+ name="iframe_a">``</iframe>` 
+`<p>``<a href="http://www. xitecsol
+utions.com" target="iframe_a">` 
+xitecsolutions.com</a>`</p>`  
 
 HTML iframe Tag 
 Tag Description 
-<iframe>
+`<iframe>`
  Defines an inline sub window (fra me)
  
-HTML Colors 
+## HTML Colors 
 Colors are displayed combining RED, GREEN, and BLUE light. 
 Color Values  
 HTML colors are defined using a hexadeci
@@ -1540,7 +1597,6 @@ low, you will see the result of
 varying the red light from 0 
 to 255, while keeping the green
  and blue light at zero. 
-
 
 To see the full list of color mixes when RE
 D varies from 0 to 255, click on one of the 
@@ -1705,7 +1761,6 @@ rgb(255,0,0)
   
  
 
-
 Shades of Gray 
 Gray colors are created by using an equal am
 ount of power to all of
@@ -1753,7 +1808,6 @@ Gray Shades Color HEXColor RGB
   #E0E0E0  rgb(224,224,224) 
   #E8E8E8  rgb(232,232,232) 
   #F0F0F0  rgb(240,240,240) 
-
 
   #F8F8F8  rgb(248,248,248) 
   #FFFFFF  rgb(255,255,255) 
@@ -1904,7 +1958,6 @@ colors. Anyway, here is the list:
 9999CC 
 9999FF 
 
-
 99CC00 
 99CC33 
 99CC66 
@@ -1990,7 +2043,7 @@ FFFF99
 FFFFCC 
 FFFFFF 
  
-HTML Color Names 
+## HTML Color Names 
  
 Color Names Supported by All Browsers 
 147 color names are defined in the HTML a
@@ -2028,7 +2081,6 @@ Aqua
   Shades
  Mix
  
-
 
 Aquamarine
   #7FFFD4
@@ -2264,7 +2316,6 @@ DeepPink
   Shades
  Mix
  
-
 
 DeepSkyBlue
   #00BFFF
@@ -2495,7 +2546,6 @@ LightSlateGray
  Mix
  
 
-
 LightSlateGrey
   #778899
  
@@ -2727,7 +2777,6 @@ Plum
  Mix
  
 
-
 PowderBlue
   #B0E0E6
  
@@ -2911,8 +2960,7 @@ YellowGreen
  
  
 
-
-HTML Color Values 
+## HTML Color Values 
 Sorted by Hex Value 
 Same list sorted by color name 
 Color Name HEX Color Shades Mix
@@ -3079,7 +3127,6 @@ Indigo
   
 Shades
  Mix
-
 
 DarkOliveGreen
   #556B2F
@@ -3276,7 +3323,6 @@ DarkGrey
   Shades
  Mix
 
-
 LightBlue
   #ADD8E6
  
@@ -3465,7 +3511,6 @@ Wheat
  
   Shades
  Mix
-
 
 Beige
   #F5F5DC
@@ -3657,7 +3702,6 @@ LightYellow
  
   Shades Mix
 
-
 Ivory  #FFFFF0 
   Shades Mix
 White  #FFFFFF 
@@ -3665,68 +3709,83 @@ White  #FFFFFF
  
  
 HTML 4.01 Quick List 
-HTML Basic Document 
-<html> 
-<head> 
+## HTML Basic Document 
+`<html>` 
+`<head>` 
 
+```html
 <title>Title of document goes here</title> 
-</head> 
-<body> 
+`</head>` 
+`<body>`
+```
 Visible text goes here... 
 
-</body>  
-</html > 
+`</body>`  
+`</html >` 
 Heading Elements 
+```html
 <h1>Largest Heading</h1>  
-<h2> . . . </h2> 
-<h3> . . . </h3> 
-<h4> . . . </h4> 
-<h5> . . . </h5> 
-<h6>Smallest Heading</h6> 
+`<h2>` . . . `</h2>` 
+`<h3>` . . . `</h3>` 
+`<h4>` . . . `</h4>` 
+`<h5>` . . . `</h5>` 
+<h6>Smallest Heading</h6>
+```
 Text Elements 
+```html
 <p>This is a paragraph</p> 
-<br /> (line break) 
+`<br />` (line break)
+```
 
-<hr /> (horizontal rule) 
+`<hr />` (horizontal rule) 
 
-<pre>This text is preforma tted</pre>  
+```html
+<pre>This text is preforma tted</pre>
+```
 Logical Styles 
+```html
 <em>This text is emphasized</em> 
-<strong>This text is strong</strong> 
+<strong>This text is strong</strong>
+```
 
-<code>This is some computer code</code>  
-
+```html
+<code>This is some computer code</code>
+```
 
 Physical Styles 
+```html
 <b>This text is bold</b> 
-<i>This text is italic</i>  
+<i>This text is italic</i>
+```
 Links 
 Ordinary link: <a href="http://www.ex
 ample.com/">Link-text goes here</a> 
-Image-link: <a href="http://www.example.co
-m/"><img src="URL" alt="Alternate Text" 
-/></a> 
+Image-link: `<a href="http://www.example.co
+m/">``<img src="URL" alt="Alternate Text" 
+/>``</a>` 
 
 Mailto link: <a href="mailto:webmaster@example.com">Send e-mail</a> 
 A named anchor: 
+```html
 <a name="tips">Tips Section</a> 
-<a href="#tips">Jump to the Tips Section</a> 
+<a href="#tips">Jump to the Tips Section</a>
+```
 Unordered list 
-<ul> 
+`<ul>` 
   <li>Item</li> 
 
   <li>Item</li> 
 
-</ul>  
+`</ul>`  
 Ordered list 
-<ol> 
+`<ol>` 
   <li>First item</li> 
 
   <li>Second item</li> 
 
-</ol>  
+`</ol>`  
 Definition list 
-<dl> 
+`<dl>` 
   <dt>First term</dt> 
 
     <dd>Definition</dd> 
@@ -3735,67 +3794,69 @@ Definition list
 
     <dd>Definition</dd> 
 
-</dl>  
+`</dl>`  
  
 Tables 
-<table border="1"> 
-  <tr> 
+`<table border="1">` 
+  `<tr>` 
 
     <th>Tableheader</th> 
 
     <th>Tableheader</th> 
 
-
-  </tr> 
-  <tr> 
-
-    <td>sometext</td> 
+  `</tr>` 
+  `<tr>` 
 
     <td>sometext</td> 
 
-  </tr> 
-</table> 
+    <td>sometext</td> 
+
+  `</tr>` 
+`</table>` 
 Iframe 
-<iframe src="demo_iframe.htm" ></iframe> 
+`<iframe src="demo_iframe.htm" >``</iframe>` 
 Frames 
-<frameset cols="25%,75%"> 
-  <frame src="page1.htm" /> 
+`<frameset cols="25%,75%">` 
+  `<frame src="page1.htm" />` 
 
-  <frame src="page2.htm" /> 
-</frameset> 
+  `<frame src="page2.htm" />` 
+`</frameset>` 
 Forms 
-<form action="http://www.example.co
-m/test.asp" method="post/get">  
-<input type="text" name="email" 
-size="40" maxlength="50" /> 
-<input type="password" /> 
-<input type="checkbox" 
-checked="checked" /> 
-<input type="radio" ch
-ecked="checked" /> 
-<input type="submit" value="Send" /> 
+`<form action="http://www.example.co
+m/test.asp" method="post/get">`  
+`<input type="text" name="email" 
+size="40" maxlength="50" />` 
+`<input type="password" />` 
+`<input type="checkbox" 
+checked="checked" />` 
+`<input type="radio" ch
+ecked="checked" />` 
+`<input type="submit" value="Send" />` 
 
-<input type="reset" /> 
+`<input type="reset" />` 
 
-<input type="hidden" /> 
+`<input type="hidden" />` 
 
  
 
-<select> 
+`<select>` 
 
-<option>Apples</option> 
+```html
+<option>Apples</option>
+```
 
+```html
 <option selected="select
 ed">Bananas</option> 
 <option>Cherries</option> 
-</select> 
-<textarea name="comment" rows="60" cols=" 20"></textarea> 
+`</select>` 
+`<textarea name="comment" rows="60" cols=" 20">``</textarea>` 
  
-</form> 
+`</form>`
+```
 Entities 
-&lt; is the same as < 
-&gt; is the same as > 
+&lt; is the same as `< 
+&gt; is the same as >` 
 
 &#169; is the same as © 
-
 
