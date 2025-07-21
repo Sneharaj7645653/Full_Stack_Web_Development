@@ -1,0 +1,16 @@
+{
+  "name": "inception",
+  "version": "1.0.0",
+  "description": "Learning React from scratch",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "learning",
+    "change"
+  ],
+  "author": "Sneha Raj",
+  "license": "ISC"
+}
