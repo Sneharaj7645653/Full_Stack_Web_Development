@@ -1,9 +1,10 @@
 {
-  "name": "inception",
+  "name": "react-learning",
   "version": "1.0.0",
   "description": "Learning React from scratch",
-  "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
@@ -12,5 +13,12 @@
     "change"
   ],
   "author": "Sneha Raj",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
 }
