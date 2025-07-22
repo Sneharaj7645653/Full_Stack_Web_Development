@@ -2,11 +2,10 @@
   "name": "food_ordering_app",
   "version": "1.0.0",
   "description": "simple food ordering app building while learning",
- 
   "scripts": {
     "test": "jest",
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "keywords": [
     "food",
@@ -16,5 +15,12 @@
     "learning"
   ],
   "author": "Sneha Raj",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
 }

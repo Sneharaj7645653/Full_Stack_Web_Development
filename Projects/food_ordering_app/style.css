@@ -1,0 +1,27 @@
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: sticky;
+}
+
+.logoContainer img {
+    height: 100px;
+    background-color: blue;
+}
+
+.navContainer ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    justify-content: space-between;
+    padding-right: 40px;
+    font-size: larger;
+    font-weight: bolder;
+}
