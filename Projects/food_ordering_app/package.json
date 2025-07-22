@@ -1,0 +1,20 @@
+{
+  "name": "food_ordering_app",
+  "version": "1.0.0",
+  "description": "simple food ordering app building while learning",
+ 
+  "scripts": {
+    "test": "jest",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [
+    "food",
+    "ordering",
+    "app",
+    "react",
+    "learning"
+  ],
+  "author": "Sneha Raj",
+  "license": "ISC"
+}
