@@ -68,3 +68,19 @@
     cursor: pointer;
     border: 1px solid black;
 }
+
+.filter {
+    margin-top: 20px;
+    display: flex;
+    
+}
+
+.filter-btn {
+    background-color: rgb(225, 225, 225);
+    height: 30px;
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
