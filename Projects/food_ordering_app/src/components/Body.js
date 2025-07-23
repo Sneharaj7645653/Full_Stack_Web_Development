@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 const Body = () => {
-    let [restaurantList , setRestaurantList] = useState([data]);
+    let [restaurantList , setRestaurantList] = useState(objList);
     return (
         <div className="body">
             <div className="search">🔍  Search </div>
@@ -19,7 +19,7 @@ const Body = () => {
             </div>
             <div className="res-container">
                 {
-                    objList.map((restaurant) => {
+                    restaurantList.map((restaurant) => {
                         return <RestaurantCard key={restaurant.info.id} resData={restaurant} />;
                     })
                 }
