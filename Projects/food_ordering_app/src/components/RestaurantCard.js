@@ -7,6 +7,7 @@ const styleCard = {
 
 const RestaurantCard = (props) => {
     let {resData: Data} = props;
+    
     const {name,cloudinaryImageId,avgRating,sla} = Data?.info; //Optional chaining to avoid errors if Data or info is undefined
     
     return (
