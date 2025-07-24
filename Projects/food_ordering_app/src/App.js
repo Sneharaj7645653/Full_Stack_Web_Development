@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import About from "./components/About";
-
+import Contacts from "./components/Contacts";
+import Error from "./components/Error";
 const App = () => (
   <>
     <Header />
-    <Body />
+    <Outlet />
   </>
 );
 
@@ -16,12 +17,23 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <h1>Page Not Found</h1>
+    children: [
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contacts",
+        element: <Contacts />
+      },
+      {
+        path: "/",
+        element: <Body />
+      }
+    ],
+    errorElement: <Error /> 
   },
-  {
-    path: "/about",
-    element: <About />
-  }
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
