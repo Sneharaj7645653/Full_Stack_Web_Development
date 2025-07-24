@@ -1,21 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import About from "./components/About";
 
+const App = () => (
+  <>
+    <Header />
+    <Body />
+  </>
+);
 
-
-
-
-const App = () => {
-  return (
-    <><Header /><Body /></>
-  );
-};
-
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <h1>Page Not Found</h1>
+  },
+  {
+    path: "/about",
+    element: <About />
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+// Use RouterProvider to supply the router to your app
+root.render(<RouterProvider router={router} />);
 
 
 
