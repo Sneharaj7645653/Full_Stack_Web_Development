@@ -11,7 +11,6 @@
 
 .logoContainer img {
     height: 100px;
-    background-color: blue;
 }
 
 .navContainer ul {
@@ -35,25 +34,26 @@
 
 .res-card {
     width: 250px;
-    height: 300px;
+    height: auto;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-start;
 }
 .res-card:hover{
     border: 1px solid black;
     cursor: pointer;
 }
 .res-card img {
-    height: 50%;
+    height: 150px;
     border-radius: 10px;
+    margin: auto;
 }
 
-.search {
+/* .search {
     margin-top: 20px;
     background-color: rgb(225, 225, 225);
     height: 30px;
@@ -61,13 +61,13 @@
     display: flex;
     align-items: center;
     padding: 0px 10px 0px 10px;
-}
+} */
 
-.search:hover {
+/* .search:hover {
     background-color: rgb(200, 200, 200);
     cursor: pointer;
     border: 1px solid black;
-}
+} */
 
 .filter {
     margin-top: 20px;
@@ -100,4 +100,9 @@
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     
+}
+
+input {
+    margin: 10px;
+    width: 200px;
 }

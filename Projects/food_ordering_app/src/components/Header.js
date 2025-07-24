@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Header = () => {
 
-    const [btnName , setBtnName] = useState("LOGIN");
+    const [btnName , setBtnName] = useState("Login");
 
 
 
@@ -16,11 +16,11 @@ const Header = () => {
             </div>
             <div className="navContainer">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                    <li><button className="login" onClick={()=>{setBtnName(btnName=="LOGIN"?"LOGOUT":"LOGIN")}}>{btnName}</button></li>
+                    <li><button>Home</button></li>
+                    <li><button>About</button></li>
+                    <li><button>Contact</button></li>
+                    <li><button>Cart</button></li>
+                    <li><button className="login" onClick={()=>{setBtnName(btnName=="Login"?"Logout":"Login")}}>{btnName}</button></li>
                 </ul>
             </div>
         </div>
