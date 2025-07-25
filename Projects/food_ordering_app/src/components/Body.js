@@ -3,8 +3,7 @@ import objList from "../utils/mockData";
 import { use, useState } from "react";
 import { useEffect } from "react";
 import Shimmer from "./Shimmer";
-
-
+import { Link } from "react-router";    
 
 
 const Body = () => {
@@ -49,13 +48,13 @@ const Body = () => {
             <div className="filter">
                 <button className="filter-btn" onClick={()=>{
                     const filteredList = restaurantList.filter((restaurant) => restaurant.info.avgRating > 4.0);
-                    setRestaurantList(filteredList);                    
+                    setFilteredRestaurantList(filteredList);                    
                 }}>Top Rated Restaurants</button>
             </div>
             <div className="res-container">
                 {
                     filteredRestaurantList.map((restaurant) => {
-                        return <RestaurantCard key={restaurant.info.id} resData={restaurant} />;
+                        return <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>;
                     })
                 }
             </div>
