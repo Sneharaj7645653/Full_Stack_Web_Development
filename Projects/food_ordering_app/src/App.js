@@ -6,6 +6,12 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contacts from "./components/Contacts";
 import Error from "./components/Error";
+import Menu from "./components/Menu";
+
+
+
+
+
 const App = () => (
   <>
     <Header />
@@ -29,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Body />
+      },
+      {
+        path: "/restaurants/:restaurantId",
+        element: <Menu />
       }
     ],
     errorElement: <Error /> 
@@ -37,7 +47,6 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// Use RouterProvider to supply the router to your app
 root.render(<RouterProvider router={router} />);
 
 
