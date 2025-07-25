@@ -8,16 +8,16 @@ const styleCard = {
 const RestaurantCard = (props) => {
     let {resData: Data} = props;
     
-    const {name,cloudinaryImageId,avgRating,sla,costforTwo,cuisines} = Data?.info; //Optional chaining to avoid errors if Data or info is undefined
+    const {name,cloudinaryImageId,avgRating,sla,costForTwo,cuisines} = Data?.info; //Optional chaining to avoid errors if Data or info is undefined
     
     return (
         <div className="res-card" style={styleCard}>
-            <img src={CDN_URL+Data.info.cloudinaryImageId} alt="restaurant-image"></img>
+            <img src={CDN_URL+cloudinaryImageId} alt="restaurant-image"></img>
             <div>
                 <h3>{name}</h3>
                 <p>Rating: {avgRating} ⭐️</p>
                 <p>Delivery Time: {sla.deliveryTime} mins</p>
-                <p>{costforTwo}</p>
+                <p>{costForTwo}</p>
                 <p><b>Cuisines:</b> {cuisines.join(" ")}</p>
             </div>
             

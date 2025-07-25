@@ -7,7 +7,7 @@ import About from "./components/About";
 import Contacts from "./components/Contacts";
 import Error from "./components/Error";
 import Menu from "./components/Menu";
-
+import Cart from "./components/Cart";
 
 
 
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/contacts",
         element: <Contacts />
+      },
+      {
+        path: "/cart",
+        element: <Cart />
       },
       {
         path: "/",
