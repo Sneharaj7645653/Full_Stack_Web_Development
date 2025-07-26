@@ -1,17 +1,17 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import About from "./components/About";
-import Contacts from "./components/Contacts";
 import Error from "./components/Error";
 import Menu from "./components/Menu";
-import Cart from "./components/Cart";
+import { lazy } from "react";
 
 
-
-
+const Grocery = lazy(() => import("./components/Grocery"));
+const About = lazy(() => import("./components/About"));
+const Contacts = lazy(() => import("./components/Contacts"));
+const Cart = lazy(() => import("./components/Cart"));
 const App = () => (
   <>
     <Header />
@@ -26,15 +26,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/about",
-        element: <About />,
+        element: <Suspense fallback={<h1>Loading</h1>}><About /></Suspense>,
       },
       {
         path: "/contacts",
-        element: <Contacts />
+        element: <Suspense fallback={<h1>Loading</h1>}><Contacts /></Suspense>
       },
       {
         path: "/cart",
-        element: <Cart />
+        element: <Suspense fallback={<h1>Loading</h1>}><Cart /></Suspense>
       },
       {
         path: "/",
@@ -43,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/restaurants/:restaurantId",
         element: <Menu />
+      },
+      {
+        path: "/grocery",
+        element: <Suspense fallback={<h1>Loading</h1>}><Grocery /></Suspense>
       }
     ],
     errorElement: <Error /> 

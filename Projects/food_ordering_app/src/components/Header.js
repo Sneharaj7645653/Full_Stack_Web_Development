@@ -22,6 +22,7 @@ const Header = () => {
                     <li><button><Link to={"/about"}>About</Link></button></li>
                     <li><button><Link to={"/contacts"}>Contacts</Link></button></li>
                     <li><button><Link to={"/about"}>Cart</Link></button></li>
+                    <li><button><Link to={"/grocery"}>Grocery</Link></button></li>
                     <li><button className="login" onClick={()=>{setBtnName(btnName=="Login"?"Logout":"Login")}}>{btnName}</button></li>
                 </ul>
             </div>
