@@ -14,10 +14,17 @@ const Body = () => {
 
 
     const fetchData = async () => {
-    const data = await fetch("https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=21.99740&lng=79.00110&carousel=true&third_party_vendor=1");
+    //const data = await fetch("https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=21.99740&lng=79.00110&carousel=true&third_party_vendor=1");
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.99740&lng=79.00110&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const jsonData = await data.json();
-    setRestaurantList(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
-    setFilteredRestaurantList(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
+
+    debugger
+    
+    // setRestaurantList(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
+    // setFilteredRestaurantList(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
+    setRestaurantList(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
+    setFilteredRestaurantList(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
+    console.log(jsonData);
     
     };
 
@@ -33,6 +40,7 @@ const Body = () => {
         return <h1>Looks like you are offline. Please check your internet connection.</h1>;
     }
 
+    console.log("rendering body");
 
 
     return restaurantList.length === 0 ? <Shimmer /> : (
@@ -62,6 +70,7 @@ const Body = () => {
                 }
             </div>
         </div>
+      
     );
 };
 
