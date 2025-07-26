@@ -2,8 +2,7 @@ import UserClass from "./UserClass";
 
 const About = () => {
     return (
-        <UserClass />
-        
+        <UserClass name="Name from Class based component"/>
     );
 };
 
