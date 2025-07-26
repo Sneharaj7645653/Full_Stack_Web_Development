@@ -4,6 +4,7 @@ import { use, useState } from "react";
 import { useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";    
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 const Body = () => {
@@ -28,7 +29,9 @@ const Body = () => {
     },[]);
 
 
-
+    if(useOnlineStatus() === false) {
+        return <h1>Looks like you are offline. Please check your internet connection.</h1>;
+    }
 
 
 
