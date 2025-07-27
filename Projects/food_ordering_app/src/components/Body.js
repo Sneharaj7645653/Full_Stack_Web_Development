@@ -41,36 +41,93 @@ const Body = () => {
 
     console.log("rendering body");
 
-    return restaurantList.length === 0 ? <Shimmer /> : (
-        <div className="body">
-            <div className="search">
-                <input type="text" value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
-                <button onClick={()=>{
-                    if (searchText.trim() === "") {
-                        setFilteredRestaurantList(restaurantList);
-                        return;
-                    }
-                    const filteredList = restaurantList.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                    setFilteredRestaurantList(filteredList);
-                }}> Search  🔍</button>
-            </div>
-            <div className="filter">
-                <button className="filter-btn" onClick={()=>{
-                    const filteredList = restaurantList.filter((restaurant) => restaurant.info.avgRating > 4.0);
-                    setFilteredRestaurantList(filteredList);                    
-                }}>Top Rated Restaurants</button>
-            </div>
-            <div className="res-container">
-                {
+    // return restaurantList.length === 0 ? <Shimmer /> : (
+    //     <div className="body">
+    //         <div className="search">
+    //             <input type="text" value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
+    //             <button onClick={()=>{
+    //                 if (searchText.trim() === "") {
+    //                     setFilteredRestaurantList(restaurantList);
+    //                     return;
+    //                 }
+    //                 const filteredList = restaurantList.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
+    //                 setFilteredRestaurantList(filteredList);
+    //             }}> Search  🔍</button>
+    //         </div>
+    //         <div className="filter">
+    //             <button className="filter-btn" onClick={()=>{
+    //                 const filteredList = restaurantList.filter((restaurant) => restaurant.info.avgRating > 4.0);
+    //                 setFilteredRestaurantList(filteredList);                    
+    //             }}>Top Rated Restaurants</button>
+    //         </div>
+    //         <div className="res-container">
+    //             {
                     
-                    filteredRestaurantList.map((restaurant) => {
-                        return <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>;
-                    })
-                }
-            </div>
-        </div>
+    //                 filteredRestaurantList.map((restaurant) => {
+    //                     return <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>;
+    //                 })
+    //             }
+    //         </div>
+    //     </div>
       
-    );
+    // );
+
+    return restaurantList.length === 0 ? (
+  <Shimmer />
+) : (
+  <div className="body p-4">
+    <div className="search flex gap-4 mb-4">
+      <input
+        type="text"
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
+        className="px-4 py-2 border border-gray-300 rounded-md w-full md:w-1/3"
+        placeholder="Search restaurants..."
+      />
+      <button
+        onClick={() => {
+          if (searchText.trim() === "") {
+            setFilteredRestaurantList(restaurantList);
+            return;
+          }
+          const filteredList = restaurantList.filter((restaurant) =>
+            restaurant.info.name.toLowerCase().includes(searchText.toLowerCase())
+          );
+          setFilteredRestaurantList(filteredList);
+        }}
+        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+      >
+        Search 🔍
+      </button>
+    </div>
+
+    <div className="filter mb-6">
+      <button
+        className="filter-btn px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
+        onClick={() => {
+          const filteredList = restaurantList.filter(
+            (restaurant) => restaurant.info.avgRating > 4.0
+          );
+          setFilteredRestaurantList(filteredList);
+        }}
+      >
+        Top Rated Restaurants
+      </button>
+    </div>
+
+    <div className="res-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {filteredRestaurantList.map((restaurant) => (
+        <Link
+          to={"/restaurants/" + restaurant.info.id}
+          key={restaurant.info.id}
+          className="block"
+        >
+          <RestaurantCard resData={restaurant} />
+        </Link>
+      ))}
+    </div>
+  </div>
+);
 };
 
 export default Body;
