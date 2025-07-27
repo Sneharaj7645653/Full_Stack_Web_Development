@@ -9,7 +9,6 @@ const RestaurantCard = (props) => {
     let {resData: Data} = props;
     
     const {name,cloudinaryImageId,avgRating,sla,costForTwo,cuisines} = Data?.info; //Optional chaining to avoid errors if Data or info is undefined
-    console.log("rendering restaurant card", name);
     return (
         // <div className="res-card" style={styleCard}>
         //     <img src={CDN_URL+cloudinaryImageId} alt="restaurant-image"></img>

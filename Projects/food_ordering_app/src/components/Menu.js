@@ -2,7 +2,7 @@ import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router";
 import useMenu from "../utils/useMenu";
-
+import MenuCards from "./MenuCards";
 
 
 const Menu = () => {
@@ -10,8 +10,6 @@ const Menu = () => {
     const {restaurantId} = useParams();
     const receivedData = useMenu(restaurantId);
     const resInfo = receivedData;
-
-    console.log(restaurantId);    
     
     const name = resInfo?.data?.cards?.[2]?.card?.card?.info?.name || "Name not available";
     const cuisines = resInfo?.data?.cards?.[2]?.card?.card?.info?.cuisines || "cuisines not available";
@@ -24,10 +22,12 @@ const Menu = () => {
     //resInfo?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
 
-    //console.log(list);
-    for(let i = 0; i < newList.length; i++) {
-        console.log(newList[i].card.card.title);
-    }
+    // console.log(newList);
+    // for(let i = 0; i < newList.length; i++) {
+    //     console.log(newList[i].card.card.title);
+    //     console.log(newList[i].card.card.itemCards);
+        
+    // }
 
 
     return resInfo === null ? (
@@ -47,18 +47,29 @@ const Menu = () => {
   <h2 className="text-2xl font-semibold text-blue-700 mt-6">🍽️ Menu</h2>
   <p className="text-sm text-gray-500">Available items:</p>
 
-  <ul className="list-disc list-inside space-y-2 text-gray-800 list-none ">
+  <ul className="list-inside space-y-2 text-gray-800 list-none ">
     {newList.map((item, index) =>
-      item.card?.card?.title ? (
-        <div key={index}
-          className="hover:bg-gray-100 p-2 rounded-md transition-colors duration-200 flex justify-between items-center">
-            <li
-            
-            className="hover:text-blue-500 transition-colors duration-200 "
-            >
-            {item.card.card.title}
-          </li>
-          <h1>⬇️</h1>
+      item.card?.card?.title && item?.card?.card?.itemCards? (
+        <div key={index} className="hover:bg-gray-100 p-2 rounded-md transition-colors duration-200   items-center">
+            <div className="justify-between flex items-center ">
+              <li className="hover:text-blue-500 transition-colors duration-200 font-bold text-2xl">{item.card.card.title}</li>
+              <button onClick={(e)=>{
+                let children = e.target.parentElement.parentNode.children;
+                for(let i=1; i<children.length; i++) {
+                  if(children[i].classList.contains("visible")) {
+                    children[i].classList.remove("visible");
+                    children[i].style.display = "none";
+                    children[i].classList.add("hidden");
+                  } else {
+                    children[i].classList.remove("hidden");
+                    children[i].classList.add("visible");
+                    children[i].style.display = "block";
+                  }
+                }
+
+              }}>⬇️</button>
+            </div>
+            <MenuCards data={item?.card?.card?.itemCards}/>
         </div>
       ) : null
     )}

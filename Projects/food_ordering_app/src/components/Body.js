@@ -23,8 +23,7 @@ const Body = () => {
     setFilteredRestaurantList(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
     //setRestaurantList(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
     //setFilteredRestaurantList(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? []);
-    console.log(jsonData);
-    
+  
     };
 
 
@@ -39,11 +38,6 @@ const Body = () => {
         return <h1>Looks like you are offline. Please check your internet connection.</h1>;
     }
 
-    console.log("rendering body");
-    if(restaurantList.length != 0){
-      console.log("after body",restaurantList);
-    }
-    console.log("rendering body later");
 
     return restaurantList.length === 0 ? (
   <Shimmer />
@@ -107,33 +101,3 @@ export default Body;
 
 
 
-// return restaurantList.length === 0 ? <Shimmer /> : (
-    //     <div className="body">
-    //         <div className="search">
-    //             <input type="text" value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
-    //             <button onClick={()=>{
-    //                 if (searchText.trim() === "") {
-    //                     setFilteredRestaurantList(restaurantList);
-    //                     return;
-    //                 }
-    //                 const filteredList = restaurantList.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
-    //                 setFilteredRestaurantList(filteredList);
-    //             }}> Search  🔍</button>
-    //         </div>
-    //         <div className="filter">
-    //             <button className="filter-btn" onClick={()=>{
-    //                 const filteredList = restaurantList.filter((restaurant) => restaurant.info.avgRating > 4.0);
-    //                 setFilteredRestaurantList(filteredList);                    
-    //             }}>Top Rated Restaurants</button>
-    //         </div>
-    //         <div className="res-container">
-    //             {
-                    
-    //                 filteredRestaurantList.map((restaurant) => {
-    //                     return <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>;
-    //                 })
-    //             }
-    //         </div>
-    //     </div>
-      
-    // );
