@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 import Header from "./components/Header";
@@ -6,18 +6,43 @@ import Body from "./components/Body";
 import Error from "./components/Error";
 import Menu from "./components/Menu";
 import { lazy } from "react";
-
+import UserContext from "./utils/UserContext";
+import {useState} from "react";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => import("./components/About"));
 const Contacts = lazy(() => import("./components/Contacts"));
 const Cart = lazy(() => import("./components/Cart"));
-const App = () => (
-  <>
+
+
+
+
+
+
+
+const App = () => {
+
+  const [userName, setUserName] = useState();
+   const fetchData = async ()=>{
+    const userData = await fetch("https://api.github.com/users/Sneharaj7645653");
+    const data = await userData.json();
+    const name = data.name;
+    setUserName(name)
+  }
+ 
+  useEffect( ()=>{
+    fetchData();
+  },[])
+
+  
+  
+  return (
+    <UserContext.Provider value={{loggedInUser:userName}}>
     <Header />
     <Outlet />
-  </>
-);
+  </UserContext.Provider>
+  )
+};
 
 const router = createBrowserRouter([
   {
