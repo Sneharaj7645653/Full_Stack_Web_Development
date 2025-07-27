@@ -1,6 +1,7 @@
+import { useState } from "react";
 import MenuCard from "./MenuCard";
 const MenuCards = (props) => {
-  const { data } = props;
+  const { data , showItems } = props;
   return (
     data.map((item, index) => {
       return (
@@ -12,6 +13,7 @@ const MenuCards = (props) => {
             image={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/"+item.card.info.imageId || undefined}    
             isBestseller={item.card.info.isBestseller}
             isVeg={item?.card?.info?.isVeg ? 1 : 0}
+          
           />
         </div>  
     )}));

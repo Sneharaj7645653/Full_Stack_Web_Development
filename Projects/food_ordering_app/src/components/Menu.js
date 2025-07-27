@@ -20,16 +20,6 @@ const Menu = () => {
     const list = resInfo?.data?.cards?.[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
     const newList = list.slice(1, list.length); // Skipping the first card which is usually a header or promotional card
     //resInfo?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-
-
-    // console.log(newList);
-    // for(let i = 0; i < newList.length; i++) {
-    //     console.log(newList[i].card.card.title);
-    //     console.log(newList[i].card.card.itemCards);
-        
-    // }
-
-
     return resInfo === null ? (
   <Shimmer />
 ) : (
@@ -69,7 +59,7 @@ const Menu = () => {
 
               }}>⬇️</button>
             </div>
-            <MenuCards data={item?.card?.card?.itemCards}/>
+            <MenuCards data={item?.card?.card?.itemCards} showItems={index==0?true:false}/>
         </div>
       ) : null
     )}
