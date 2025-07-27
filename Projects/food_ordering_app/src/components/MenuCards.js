@@ -1,11 +1,12 @@
 import { useState } from "react";
 import MenuCard from "./MenuCard";
 const MenuCards = (props) => {
-  const { data , showItems } = props;
+  const { data , showItems, setShowIndex } = props;
+  
   return (
     data.map((item, index) => {
       return (
-        <div key={index} className="hidden menu-card bg-white rounded-lg shadow-md p-4 mb-4 ">
+        <div key={index} className="hidden menu-card bg-white rounded-lg shadow-md p-4 mb-4 " >
           <MenuCard
             title={item.card.info.name}
             description={item?.card?.info?.description?.split("(")[0]?.split("|")?.join("|")}
@@ -16,7 +17,12 @@ const MenuCards = (props) => {
           
           />
         </div>  
-    )}));
+      )
+    }
+  )
+  )  ;
+
+
   }
 
 export default MenuCards;
