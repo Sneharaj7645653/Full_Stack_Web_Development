@@ -33,39 +33,33 @@ const Menu = () => {
     return resInfo === null ? (
   <Shimmer />
 ) : (
-  // <div className="menu">
-  //   <h1>{name}</h1>
-  //   <p>{cuisines.join(", ")}</p>
-  //   <p>Delivery Time: {sla.deliveryTime} mins</p>
-  //   <p>{costForTwoMessage}</p>
-  //   <h2>name</h2>
-  //   <p></p>
-  //   <ul>
-  //       {newList.map((item, index) =>
-  //           item.card?.card?.title ? <li key={index}>{item.card.card.title}</li> : null
-  //       )}
-  //   </ul>
-  // </div>
-  <div className="menu p-6 max-w-2xl mx-auto bg-white rounded-xl shadow-md space-y-4">
+  <div className="menu mt-8 p-6 max-w-2xl mx-auto bg-white rounded-xl shadow-lg space-y-5 border border-gray-200">
   <h1 className="text-3xl font-bold text-gray-800">{name}</h1>
+
   <p className="text-gray-600 italic">{cuisines.join(", ")}</p>
+
   <p className="text-gray-700">
     🚚 Delivery Time: <span className="font-semibold">{sla.deliveryTime} mins</span>
   </p>
+
   <p className="text-green-600 font-medium">{costForTwoMessage}</p>
 
-  <h2 className="text-2xl font-semibold text-blue-700 mt-4">🍽️ Menu</h2>
+  <h2 className="text-2xl font-semibold text-blue-700 mt-6">🍽️ Menu</h2>
   <p className="text-sm text-gray-500">Available items:</p>
 
-  <ul className="list-disc list-inside space-y-1 text-gray-700">
+  <ul className="list-disc list-inside space-y-2 text-gray-800 list-none ">
     {newList.map((item, index) =>
       item.card?.card?.title ? (
-        <li
-          key={index}
-          className="hover:text-blue-500 transition-colors duration-200"
-        >
-          {item.card.card.title}
-        </li>
+        <div key={index}
+          className="hover:bg-gray-100 p-2 rounded-md transition-colors duration-200 flex justify-between items-center">
+            <li
+            
+            className="hover:text-blue-500 transition-colors duration-200 "
+            >
+            {item.card.card.title}
+          </li>
+          <h1>⬇️</h1>
+        </div>
       ) : null
     )}
   </ul>
