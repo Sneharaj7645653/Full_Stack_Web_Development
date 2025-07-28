@@ -8,6 +8,11 @@ import Menu from "./components/Menu";
 import { lazy } from "react";
 import UserContext from "./utils/UserContext";
 import {useState} from "react";
+import {Provider} from "react-redux"
+import appStore from "./utils/appStore";
+
+
+
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => import("./components/About"));
@@ -37,10 +42,12 @@ const App = () => {
   
   
   return (
-    <UserContext.Provider value={{loggedInUser:userName}}>
-    <Header />
-    <Outlet />
-  </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{loggedInUser:userName}}>
+      <Header />
+      <Outlet />
+      </UserContext.Provider>
+  </Provider>
   )
 };
 
