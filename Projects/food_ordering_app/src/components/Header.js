@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 
 
@@ -17,6 +18,10 @@ const Header = () => {
 
     const userData = useContext(UserContext);
 
+    const cartItems = useSelector((store)=>store.cart.items);
+
+
+
     return (
         <div id="header" className="flex items-center justify-between px-6 py-4 shadow-md bg-white">
             <div className="logoContainer">
@@ -28,7 +33,7 @@ const Header = () => {
                     <li><button className="hover:text-blue-600"><Link to={"/"}>Home</Link></button></li>
                     <li><button className="hover:text-blue-600"><Link to={"/about"}>About</Link></button></li>
                     <li><button className="hover:text-blue-600"><Link to={"/contacts"}>Contacts</Link></button></li>
-                    <li><button className="hover:text-blue-600"><Link to={"/about"}>Cart</Link></button></li>
+                    <li><button className="hover:text-blue-600 font-bold text-2xl"><Link to={"/about"}>🛒 ({cartItems.length})</Link></button></li>
                     <li><button className="hover:text-blue-600"><Link to={"/grocery"}>Grocery</Link></button></li>
                     <li>
                         <button 

@@ -1,5 +1,11 @@
 const MenuCard = (props)=>{
     const { title, description, price, image, isBestseller, isVeg } = props;
+
+    const handleAddItem = ()=>{
+      
+    }
+
+
     return (
     <div className="flex items-start justify-between bg-white p-6 rounded-xl shadow-md border border-gray-200 max-w-4xl mx-auto mt-8 hover:shadow-lg transition-shadow ">
 
@@ -27,7 +33,7 @@ const MenuCard = (props)=>{
           alt="image"
           className="w-24 h-24 rounded-lg object-cover mb-2"
         />
-        <button className="bg-white border border-gray-300 px-4 py-1 rounded-full text-green-600 font-semibold shadow-sm hover:bg-green-50">
+        <button className="bg-white border border-gray-300 px-4 py-1 rounded-full text-green-600 font-semibold shadow-sm hover:bg-green-50" onClick={handleAddItem}>
           ADD
         </button>
       </div>
