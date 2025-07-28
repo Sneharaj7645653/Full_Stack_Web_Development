@@ -5,8 +5,8 @@ const MenuCard = (props)=>{
     const { title, description, price, image, isBestseller, isVeg } = props;
 
     const dispatch = useDispatch();
-    const handleAddItem = ()=>{
-      dispatch(addItem("default"))
+    const handleAddItem = (item)=>{
+      dispatch(addItem(item))
     }
 
 
@@ -37,7 +37,7 @@ const MenuCard = (props)=>{
           alt="image"
           className="w-24 h-24 rounded-lg object-cover mb-2"
         />
-        <button className="bg-white border border-gray-300 px-4 py-1 rounded-full text-green-600 font-semibold shadow-sm hover:bg-green-50" onClick={handleAddItem}>
+        <button className="bg-white border border-gray-300 px-4 py-1 rounded-full text-green-600 font-semibold shadow-sm hover:bg-green-50" onClick={(e)=>{handleAddItem(props)}}>
           ADD
         </button>
       </div>
