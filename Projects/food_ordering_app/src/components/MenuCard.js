@@ -1,8 +1,12 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+
 const MenuCard = (props)=>{
     const { title, description, price, image, isBestseller, isVeg } = props;
 
+    const dispatch = useDispatch();
     const handleAddItem = ()=>{
-      
+      dispatch(addItem("default"))
     }
 
 
