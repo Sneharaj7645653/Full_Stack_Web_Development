@@ -195,6 +195,11 @@ const config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  testEnvironment: "jsdom",
+  setupFiles: ["<rootDir>/jest.setup.js"],
+  clearMocks: true,
+  collectCoverage: true,
+  coverageDirectory: "coverage",
 };
 
 module.exports = config;

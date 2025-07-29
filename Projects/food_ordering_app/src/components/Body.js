@@ -3,7 +3,7 @@ import objList from "../utils/mockData";
 import { use, useState } from "react";
 import { useEffect } from "react";
 import Shimmer from "./Shimmer";
-import { Link } from "react-router";    
+import { Link } from "react-router-dom";    
 import useOnlineStatus from "../utils/useOnlineStatus";
 
 
