@@ -18,7 +18,13 @@ const CartPage = () => {
     <button onClick={()=>{handleClearCart()}} className="text-orange-500 border border-red-300 px-4 py-1 rounded-full font-semibold hover:bg-red-50 transition" >
         Clear Cart
     </button>
+    
     </div>
+    {cartItems.length === 0 ? (
+        <h1 className="text-3xl font-semibold text-center text-gray-600 mt-10">
+            Your cart is empty!
+        </h1>
+        ) : null}
       {cartItems.map((item,index) => (
         <div
           key={index}
